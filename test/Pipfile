@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+pillow = "*"
+"flake8" = "*"
+yarl = "<1.2"
+"discord.py" = {ref = "rewrite", git = "https://github.com/Rapptz/discord.py"}
+rethinkdb = "*"
+ptvsd = "*"
+pyyaml = "*"
+numpy = "*"
+
+[dev-packages]
+pylint = "*"
+
+[requires]
+python_version = "3.6"
