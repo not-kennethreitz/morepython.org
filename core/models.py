@@ -8,11 +8,12 @@ from taggit.managers import TaggableManager
 
 class Post(models.Model):
     """A Post, posted on the site."""
+
     title = models.TextField()
     text = models.TextField()
     timestamp = models.DateTimeField(default=timezone.now)
     tags = TaggableManager()
-    uri = models.URLField()
+    uri = models.URLField(null=True)
     uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     published = models.BooleanField(editable=True, default=False)
 

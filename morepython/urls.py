@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+import core.views
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
+    path("", core.views.PostListView.as_view()),
+    path("<slug:slug>", core.views.PostDetailView.as_view()),
 ]
