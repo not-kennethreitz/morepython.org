@@ -7,8 +7,7 @@ from taggit.managers import TaggableManager
 class Post(models.Model):
     title = models.TextField()
     text = models.TextField()
-    created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
+    timestamp = models.DateTimeField(default=timezone.now)
     tags = TaggableManager()
 
     def __unicode__(self):

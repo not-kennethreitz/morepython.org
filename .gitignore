@@ -1,2 +1,4 @@
 .env
 db.sqlite3
+core/migrations/0002_auto_20190310_1337.py
+core/models.py
